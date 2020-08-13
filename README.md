@@ -7,46 +7,29 @@
 Several models were developed and tuned to find the most accurate predictor of flood presence in Oroville, CA. The <i>Google Earth Engine</i> API was used to retrieve map images of Oroville over time while data from <i>NOAA</i> was used for additional feature development and model measurement.
 
 ### Contents:
-- <a href = "https://git.generalassemb.ly/chrisvolpacchio/project_3/blob/master/CV%20Sub-Reddit%20Classifier.ipynb#top">Introduction</a>
-- <a href = "https://git.generalassemb.ly/chrisvolpacchio/project_3/blob/master/CV%20Sub-Reddit%20Classifier.ipynb#scraping">Text Scraping</a>
-- <a href = "https://git.generalassemb.ly/chrisvolpacchio/project_3/blob/master/CV%20Sub-Reddit%20Classifier.ipynb#cleaning">Data Cleaning</a>
-- <a href = "https://git.generalassemb.ly/chrisvolpacchio/project_3/blob/master/CV%20Sub-Reddit%20Classifier.ipynb#stops">Preliminary Model Development</a>
+- <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#Introduction">Introduction</a>
+- <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#cleaning">EDA</a>
+- <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#engineer">Feature Cleaning & Engineering</a>
+- <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#logreg">Preliminary Classifier</a>
 - <a href = "https://git.generalassemb.ly/chrisvolpacchio/project_3/blob/master/CV%20Sub-Reddit%20Classifier.ipynb#moremodels">Advanced Modeling</a>
+- <a href = "https://git.generalassemb.ly/chrisvolpacchio/project_3/blob/master/CV%20Sub-Reddit%20Classifier.ipynb#results">Measurement</a>
 
 ### Data Dictionary
 
 |Feature|Type|Dataset|Description|
 |---|---|---|---|
-|**state**|*object*|sat2017|The states that have representatives who have participated in the exams.|
-
+|**flood**|*float*|df|Binary classifier indicating the occurrence of a flood, 1 or otherwise, 0.|
+|**water_level**|*float*|df|Scaled pixel count from the Google Earth Engine API layered on bodies of water.|
+|**water_chg**|*float*|df|Difference of scaled water pixel count from previous period.|
+|**water_pct_chg**|*float*|df|Percent difference of scaled water pixel count from previous period.|
+|**alert**|*int64*|df|Binary classifier indicating the occurrence of a flood, 1 or otherwise, 0.|
 
 # Conclusion
 
 ### Recommendations
-Our final model detects the presence of TV–MA content in context approximately 97% of the time. The model is able to intake any number of text blocks of any length and almost perfectly identify the presence of unwanted content.
+Our classifiers look to classify whether a flood will be occurring the following day. The final model detects the whether a flood will occur the following day with approximately 97% accuracy. More importantly we are only overlooking the occurrence of a flood ~9% of the time.
 
 ### Next Steps
-* Use alternate sources for inforation surrounding program content such as network websites.
-* Improve model *overall* accurracy to avoid withholding TV–Y content as well as any content not considered to be TV–MA.
+* Use alternate sources for information surrounding program content such as network websites.
+* Improve model *overall* accuracy to avoid withholding TV–Y content as well as any content not considered to be TV–MA.
 * Increase our model's TV–MA detection–rate to 1.00 (100%).
-
-https://azpbs.org/2017/11/early-childhood-brain-development-lifelong-impact/
-
-# project_5
-Water coverage from Earth Engine
-
-Code outline
-
-1. Specify location (longitude and latitude), default to Houston for now.
-
-2. Get a collection of Landsat images that cover the specified location.
-
-3. Crop images to a specified geometry around the location.
-
-  Should be able to do with in ee.
-
-4. Apply .normalizedDifference() and count water pixels to get water coverage (in numpy or ee?) for each image.
-
-5. Take timestamp and percent water coverage for each image and add them as rows to a dataframe.
-
-6. Do some modeling...
