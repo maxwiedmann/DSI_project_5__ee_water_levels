@@ -9,10 +9,10 @@ Several models were developed and tuned to find the most accurate predictor of f
 ### Contents:
 - <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#Introduction">Introduction</a>
 - <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#cleaning">EDA</a>
-- <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#engineer">Feature Cleaning & Engineering</a>
+- <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#engineer">Feature Cleaning and Engineering</a>
 - <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#logreg">Preliminary Classifier</a>
-- <a href = "https://git.generalassemb.ly/chrisvolpacchio/project_3/blob/master/CV%20Sub-Reddit%20Classifier.ipynb#moremodels">Advanced Modeling</a>
-- <a href = "https://git.generalassemb.ly/chrisvolpacchio/project_3/blob/master/CV%20Sub-Reddit%20Classifier.ipynb#results">Measurement</a>
+- <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#moremodels">Additional Modeling</a>
+- <a href = "https://github.com/maxwiedmann/DSI_project_5__ee_water_levels/blob/master/main.ipynb#results">Measurement</a>
 
 ### Data Dictionary
 
@@ -30,6 +30,6 @@ Several models were developed and tuned to find the most accurate predictor of f
 Our classifiers look to classify whether a flood will be occurring the following day. The final model detects the whether a flood will occur the following day with approximately 97% accuracy. More importantly we are only overlooking the occurrence of a flood ~9% of the time.
 
 ### Next Steps
-* Use alternate sources for information surrounding program content such as network websites.
-* Improve model *overall* accuracy to avoid withholding TV–Y content as well as any content not considered to be TV–MA.
-* Increase our model's TV–MA detection–rate to 1.00 (100%).
+* Further integrate Google Earth Engine into the 'main.ipynb' notebook and run batch scripts for different locations.
+* Improve model *overall* accuracy as well as sensitivity measure to more accurrately predict flooding.
+* .
